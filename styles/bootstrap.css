@@ -1,0 +1,86 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+    .mycontainer {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 2fr 1fr;
+        gap: 5px 5px;
+        grid-auto-flow: row dense;
+        grid-template-areas:
+          ". ."
+          ". ."
+          ". .";
+      }
+
+      @media only screen and (max-width: 800px) {
+        .mycontainer {
+            display: grid; 
+            grid-auto-flow: row dense; 
+            grid-template-columns: 1fr; 
+            grid-template-rows: 1fr; 
+            gap: 5px 5px; 
+            grid-template-areas: 
+              "."; 
+          }
+    
+        }
+     
+        .tab-nav {
+          display: flex;
+          align-items: center;
+          background: #0D1313;
+          color: white;
+        }
+        @media (max-width: 600px) {
+          .tab-nav {
+            flex-wrap: wrap;
+          }
+          .tab-nav .nav {
+            background: #222;
+            order: 2;
+            flex-basis: 100%;
+          }
+          .tab-nav .nav a {
+            font-size: 1rem;
+          }
+          .tab-nav .account-actions {
+            margin-left: auto;
+          }
+        }
+        
+        .logo {
+          color: white;
+          text-transform: uppercase;
+          text-decoration: none;
+          letter-spacing: 2px;
+          padding: 10px 20px;
+        }
+        
+        .nav {
+          text-align: center;
+          flex: 1;
+        }
+        .nav > ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: inline-flex;
+        }
+        .nav .active a {
+          background: #16473a;
+          color: #5DCCAF;
+        }
+        .nav a {
+          color: #E2E6E7;
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 20px;
+          display: inline-block;
+          font-size: 1.3rem;
+          font-weight: bold;
+        }
+        
+      
+        
